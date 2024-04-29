@@ -1,0 +1,169 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #FBFADA;
+}
+
+/*entete*/
+
+header
+{
+    display: grid;
+    width: 100%;
+}
+.header-img
+{
+    position: relative;
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    height: 64vh;
+    margin-top: 5px;
+    background-image: url("../image/OIP.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    overflow: hidden;
+}
+.header-img::after
+{
+    content: '';
+    width: 100%;
+    transform: scale(1000);
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+}
+.header-img .sub-title
+{
+    display: block;
+    margin-top: 22vh;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+    color: beige;
+
+}
+.sub-title h1
+{
+    font-size: 4em;
+    font-weight: bold;
+    font-style: oblique;
+}
+.sub-title p
+{
+    letter-spacing: 12px;
+    font-weight: 500;
+    font-size: 1.2em;
+   margin-left: -62px;
+}
+/* section containt  */
+
+.containt 
+{
+    display: flex;
+    position: relative;
+    margin: 3rem 15.5rem 10rem 3rem;
+    gap: 64px;
+    justify-content: center;
+    min-width: 70%;
+}
+.containt .containt-title
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+    position: relative;
+    font-weight: 600;
+}
+.containt .containt-title h2
+{
+    margin-bottom: 25px;
+    font-size: 1.3em;
+}
+.containt .containt-title h2 a
+{
+    color: #222831;
+    text-decoration: none;
+}
+.containt .containt-title h2:hover a
+{
+    font-size: 1.100000em;
+    transition: all 0.2s ease-in-out;
+    color: #BC7FCD;
+}
+
+.containt .containt-detailles
+{
+    padding: 10px;
+}
+
+.containt .containt-detailles h1
+{
+    margin: 63px 0 15px 0;
+}
+.containt .containt-detailles p
+{
+    margin-left: 70px;
+    text-justify: justify;
+}
+#dd
+{
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-weight: 800;
+    margin: 12rem 0 0 12%;
+}
+
+@media screen and (min-width: 588px) and (max-width: 850px){
+    .containt 
+    {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+    .containt .containt-title h2
+    {
+        margin-bottom: 15px;
+        font-size: 1em;
+    }
+    .containt .containt-detailles p
+    {
+        font-size: 13px;
+    }
+    .containt .containt-detailles h1{
+        font-size: 20px
+    }
+}
+@media screen and (min-width: 87px) and (max-width: 587px)
+{
+    .containt 
+    {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+    .containt .containt-title h2
+    {
+        margin-bottom: 25px;
+        font-size: 1em;
+    }
+    .containt .containt-detailles p
+    {
+        font-size: 13px;
+    }
+    .containt .containt-detailles h1{
+        font-size: 20px;
+        margin: 13px 0 5px 0;
+    }
+}

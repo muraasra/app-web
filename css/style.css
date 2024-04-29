@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header-containt
+{
+    display: flex;
+    position: absolute;
+    width: 100%;
+
+}
+.vertical-header-containt
+{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    align-items: center;
+    background: #0C356A;
+    height: 100%;
+    width: 250px;
+
+}
+.vertical-header-containt .pp-img
+{
+    border: solid 1px ;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    margin-bottom: 74px;
+    background-color: #D5FFD0;
+}
+.vertical-header-containt .text-details h2
+{
+ font-size: 1.5em;
+ color: #D5FFD0;
+}
+.vertical-header-containt .exit-button
+{
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    float: left;
+}
+.vertical-header-containt .exit-button span
+{
+    color: #D5FFD0;
+}
+
+.horizontal-header-containt
+{
+    display: flex;
+    position: relative;
+    background-image: linear-gradient(100deg, #0C356A, #0C356A, #279EFF );
+    width: 170%;
+    height: 100px;
+
+}
+.horizontal-header-containt li
+{
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 10px 22rem;
+}
+ .horizontal-header-containt li a
+{
+    text-decoration: none;
+    color: #D5FFD0;
+    font-size: 1.5em;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header-containt .horizontal-header-containt li:hover a, 
+.header-containt .horizontal-header-containt li:focus a
+{
+    width: 100px;
+    background: #279EFF;
+}
+
+.tableau
+{
+    display: flex;
+    position: relative;
+}
+.tableau table
+{
+    margin: 12rem 0  0 24rem;
+    z-index: 1000;
+    padding: 44px;
+    table-layout: fixed;
+    position: absolute;
+}
+.tableau table th
+{
+    border-style: solid;
+    padding: 0 23px 0 23px;
+    width: 52vh;
+}
+#etat
+{
+    width: 20vh;
+}
+.tableau td
+{
+    border-style: ridge;
+    background-color: #D5FFD0;
+    font-weight: 800;
+    border-color: transparent;
+}
+.check-containt
+{
+    display: flex;
+    gap:15px;
+    justify-content: center;
+}
