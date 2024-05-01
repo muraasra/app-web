@@ -1,19 +1,31 @@
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+html,
+body
+{
+    height: 100%;
+    overflow: hidden;
+}
+body
+{
+    background-repeat: no-repeat;
+    height: 100%;
+}
 .header-containt
 {
     display: flex;
     position: absolute;
     width: 100%;
+    height: 100%;
 
 }
 .vertical-header-containt
 {
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: column;
     padding-top: 100px;
@@ -31,11 +43,19 @@
     width: 180px;
     margin-bottom: 74px;
     background-color: #D5FFD0;
+    opacity: 0.5;
+    overflow: hidden;
+    padding: 10px 10px 0 10px;
+}
+.vertical-header-containt .pp-img img
+{
+    width: 100%;
+    height: 100%;
 }
 .vertical-header-containt .text-details h2
 {
  font-size: 1.5em;
- color: #D5FFD0;
+ color: #fff;
 }
 .vertical-header-containt .exit-button
 {
@@ -46,74 +66,146 @@
 }
 .vertical-header-containt .exit-button span
 {
-    color: #D5FFD0;
+    color: #fff;
 }
 
 .horizontal-header-containt
 {
     display: flex;
     position: relative;
-    background-image: linear-gradient(100deg, #0C356A, #0C356A, #279EFF );
-    width: 170%;
+    background-image: linear-gradient(100deg, #0C356A 40%, #279EFF );
+    width: 100%;
     height: 100px;
+    overflow: hidden;
+    z-index: 12;
 
 }
-.horizontal-header-containt li
+.horizontal-header-containt> .button
 {
+    position: relative;
+    display: flex;
     list-style: none;
-    justify-content: center;
+    width: 100% !important;
+    height: 75px;
+    background-color: transparent;
+    margin-top: 3.5rem;
     align-items: center;
-    padding: 4rem 0 10px 22rem;
-}
- .horizontal-header-containt li a
-{
+    padding-left: 15%;
+    padding-bottom: 18px;
+    border: none;
+    transition: all 0.3s ease-in-out;
     text-decoration: none;
-    color: #D5FFD0;
+    color: #fff;
     font-size: 1.5em;
     font-weight: 800;
+    cursor: pointer;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.header-containt .horizontal-header-containt li:hover a, 
-.header-containt .horizontal-header-containt li:focus a
+.header-containt .horizontal-header-containt button:hover, 
+.header-containt .horizontal-header-containt li:focus 
 {
     width: 100px;
-    background: #279EFF;
+    background: #fff;
+    padding-bottom: 2%;
+    border-radius: 15px;
+    margin-top: 4.0rem;
+    color: #0C356A;
+}
+.button.active
+{
+    width: 100px;
+    background: #fff;
+    padding-bottom: 2%;
+    border-radius: 15px;
+    margin-top: 4.0rem;
+    color: #0C356A;
+}
+.exit-button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.exit-button button
+{
+    overflow: hidden;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+button img
+{
+    width: 100%;
+    height: 100%;
+    margin-left: 12px;
+}
+.tableau-containt
+{
+    display: block;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    height: 100%;
+    width: 90%;
+    z-index: 1;
+    margin: 36.1rem 0 0 66rem;
+    position: relative;
+    border-radius: 12px;
+    z-index: 111;
+	transform: translate(-50%, -50%);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+table {
+	width: 80%;
+	border-collapse: collapse;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin: 6rem 0 0 11rem;
+    padding-top: 12rem;
+    border-radius: 12px;
+    overflow: hidden;
+
 }
 
-.tableau
-{
-    display: flex;
-    position: relative;
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
 }
-.tableau table
-{
-    margin: 12rem 0  0 24rem;
-    z-index: 1000;
-    padding: 44px;
-    table-layout: fixed;
-    position: absolute;
+
+th {
+	text-align: left;
+    z-index: 11;
 }
-.tableau table th
-{
-    border-style: solid;
-    padding: 0 23px 0 23px;
-    width: 52vh;
+
+thead {
+	th {
+		background-color: #55608f;
+	}
 }
-#etat
-{
-    width: 20vh;
-}
-.tableau td
-{
-    border-style: ridge;
-    background-color: #D5FFD0;
-    font-weight: 800;
-    border-color: transparent;
-}
-.check-containt
-{
-    display: flex;
-    gap:15px;
-    justify-content: center;
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
 }
