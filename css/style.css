@@ -1,4 +1,3 @@
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -17,40 +16,67 @@ body
 }
 .header-containt
 {
-    display: flex;
     position: absolute;
+    display: flex;
+    position: relative;
     width: 100%;
     height: 100%;
+    top: -20px;
 
 }
 .vertical-header-containt
 {
     position: relative;
     display: flex;
-    flex-direction: column;
-    padding-top: 100px;
     align-items: center;
-    background: #0C356A;
-    height: 100%;
-    width: 250px;
+    background: rgba(5, 1, 20, 0.678);
+    height: 10%;
+    width: 100%;
 
 }
 .vertical-header-containt .pp-img
 {
+    position: relative;
     border: solid 1px ;
     border-radius: 50%;
-    height: 180px;
-    width: 180px;
-    margin-bottom: 74px;
+    height: 70px;
+    width: 70px;
+    right: 0;
+    margin-right: 2rem;
     background-color: #D5FFD0;
     opacity: 0.5;
     overflow: hidden;
     padding: 10px 10px 0 10px;
 }
+.text-details{
+    color:#fff
+}
+.essai{
+    width: 260px;
+    height: 80px;
+    background: #ff9e2f;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px 1px;
+
+    position:absolute;
+    left: 100px;
+}
 .vertical-header-containt .pp-img img
 {
     width: 100%;
     height: 100%;
+}
+.vertical-header-containt .text-details
+{
+    position: absolute;
+    display: flex;
+    right: 0;
+    color: white;
+}
+.vertical-header-containt .text-details .text
+{
+    margin-right: 10px;
+    margin-top: 12px;
 }
 .vertical-header-containt .text-details h2
 {
@@ -72,53 +98,62 @@ body
 .horizontal-header-containt
 {
     display: flex;
+    flex-direction: column;
     position: relative;
-    background-image: linear-gradient(100deg, #0C356A 40%, #279EFF );
-    width: 100%;
-    height: 100px;
+    background: rgba(5, 1, 20, 0.678);
+    width: 15%;
+    height: 100%;
     overflow: hidden;
     z-index: 12;
+    padding-top: 12rem;
 
 }
 .horizontal-header-containt> .button
 {
     position: relative;
     display: flex;
-    list-style: none;
     width: 100% !important;
+    flex-direction: column;
     height: 75px;
     background-color: transparent;
-    margin-top: 3.5rem;
-    align-items: center;
-    padding-left: 15%;
-    padding-bottom: 18px;
-    border: none;
+    margin-top: 1.5rem;
+    border-left: 1px solid #55608f;
+    border-bottom: 1px solid #55608f;
+    box-shadow: 12px 2px 2px #55608f;
+    border-top: none;
+    border-right: none;
     transition: all 0.3s ease-in-out;
-    text-decoration: none;
+    text-align: center;
     color: #fff;
     font-size: 1.5em;
     font-weight: 800;
     cursor: pointer;
+    padding-left: 31%;
+    padding-top: 18px;
+    border-radius: 5px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-.header-containt .horizontal-header-containt button:hover, 
-.header-containt .horizontal-header-containt li:focus 
+.sub-title
 {
-    width: 100px;
-    background: #fff;
-    padding-bottom: 2%;
-    border-radius: 15px;
-    margin-top: 4.0rem;
-    color: #0C356A;
+    display: flex;
+    position: relative;
+    margin-left: 22px;
 }
-.button.active
+.sub-title h2
+{
+    color: #fff;
+    font-size: 1.9em;
+}
+
+.header-containt .horizontal-header-containt .button:hover, 
+.header-containt .horizontal-header-containt .button:focus 
 {
     width: 100px;
-    background: #fff;
-    padding-bottom: 2%;
-    border-radius: 15px;
-    margin-top: 4.0rem;
+    background: #279EFF;
+    padding-bottom: 1%;
+    border-radius: 25px;
+    margin-left: 2.0rem;
+
     color: #0C356A;
 }
 .exit-button
@@ -126,6 +161,10 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 0;
+    right: 0px;
+    margin-right: 12px;
+    position: absolute;
 }
 .exit-button button
 {
@@ -143,26 +182,40 @@ button img
     height: 100%;
     margin-left: 12px;
 }
-.tableau-containt
+.containt-body-navbar
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+.containt-body-navbar .tableau-containt
 {
     display: block;
     background: linear-gradient(45deg, #49a09d, #5f2c82);
     height: 100%;
-    width: 90%;
-    z-index: 1;
-    margin: 36.1rem 0 0 66rem;
-    position: relative;
-    border-radius: 12px;
+    margin-top: -1px;
+    margin-left: -1px;
+    width: 100%;
     z-index: 111;
-	transform: translate(-50%, -50%);
+    position: relative;
+    border-radius: 5px;
     overflow-y: auto;
     scrollbar-width: none;
 }
+#block2,
+#block3
+{
+    display: none;
+}
+
 table {
 	width: 80%;
 	border-collapse: collapse;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    margin: 6rem 0 0 11rem;
+    margin: 4rem;
     padding-top: 12rem;
     border-radius: 12px;
     overflow: hidden;
@@ -209,3 +262,372 @@ tbody {
 		}
 	}
 }
+#block3 button 
+{
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+
+/* responsive page*/
+
+@media screen and (max-width: 1450px)  {
+    
+    .vertical-header-containt .pp-img
+    {
+        height: 60px;
+        width: 60px;
+        margin-bottom: 74px;
+        margin-top: 3%;
+    }
+    .text-details
+    {
+        margin-left: 10px;
+        font-size: 1em;
+        top: 0;
+    }
+    .horizontal-header-containt> .button
+    {
+
+        height: 55px;
+        margin-top: 4%;
+        bottom: 0;
+        left: 0;
+
+    }
+    
+.header-containt .horizontal-header-containt .button:hover, 
+.header-containt .horizontal-header-containt .button:focus 
+    {
+        margin-top: 6%;
+        font-size: 0.9em;
+    }
+    table
+    {
+        margin-left: 7rem;
+    }
+
+}
+
+@media screen and (max-width: 1024px)
+{
+    .vertical-header-containt .pp-img
+    {
+        height: 70px;
+        width: 70px;
+        margin-top: 1rem;
+    }
+    .text-details 
+    {
+        margin-left: 10px;
+        font-size: 0.8em;
+        top: 0;
+    }
+    .text-details h2
+    {
+        margin-top: 20px;
+    }
+    .horizontal-header-containt> .button
+    {
+
+        height: 75px;
+        margin-top: 4%;
+        bottom: 0;
+        font-size: 1em;
+        text-align: center;
+        padding-left: 1%;
+        font-size: 0.99em;
+        width: 70px;
+
+    }   
+     .header-containt .horizontal-header-containt .button:hover, 
+    .header-containt .horizontal-header-containt .button:focus 
+    {
+        margin-top: 6%;
+        font-size: 0.8em;
+        text-align: center;
+        margin-left: 1rem;
+        border-radius: 15px 0 0 15px;
+        padding-left: 23px;
+
+    }
+}
+
+@media screen and (max-width: 980px)
+{
+    .vertical-header-containt .pp-img
+    {
+        height: 80px;
+        width: 80px;
+        margin-top: 1rem;
+    }
+    .text-details 
+    {
+        margin-left: 10px;
+        font-size: 0.9em;
+        top: 0;
+    }
+    .text-details h2
+    {
+        margin-top: 20px;
+    }
+    .horizontal-header-containt> .button
+    {
+
+        height: 55px;
+        margin-top: 4%;
+        bottom: 0;
+        font-size: 1em;
+        text-align: center;
+        padding-left: 10%;
+        font-size: 0.99em;
+        width: 40px;
+
+    }   
+     .header-containt .horizontal-header-containt .button:hover, 
+    .header-containt .horizontal-header-containt .button:focus 
+    {
+        margin-top: 6%;
+        font-size: 0.8em;
+        text-align: center;
+        margin-left: 1rem;
+        border-radius: 15px 0 0 15px;
+        padding-left: 23px;
+
+    }
+}
+
+@media screen and (max-width: 880px)
+{
+    .vertical-header-containt .pp-img
+    {
+        height: 50px;
+        width: 50px;
+        margin-top: 1rem;
+    }
+    .text-details 
+    {
+        margin-left: 10px;
+        font-size: 0.5em;
+        top: 0;
+    }
+    .text-details h2
+    {
+        margin-top: 20px;
+    }
+    .horizontal-header-containt> .button
+    {
+
+        height: 55px;
+        margin-top: 4%;
+        bottom: 0;
+        font-size: 1em;
+        text-align: center;
+        padding-left: 10%;
+        font-size: 0.96em;
+        width: 40px;
+
+    }   
+     .header-containt .horizontal-header-containt .button:hover, 
+    .header-containt .horizontal-header-containt .button:focus 
+    {
+        margin-top: 6%;
+        font-size: 0.8em;
+        text-align: center;
+        margin-left: 1rem;
+        padding-right: 62px;
+        border-radius: 15px 0 0 15px;
+        padding-left: 3px;
+
+    }
+}
+
+@media screen and (max-width: 780px)
+{  
+    .vertical-header-containt .pp-img
+    {
+        height: 50px;
+        width: 50px;
+        margin-top: 1rem;
+    }
+    .text-details 
+    {
+        margin-left: 10px;
+        font-size: 0.5em;
+        top: 0;
+    }
+    .text-details h2
+    {
+        margin-top: 20px;
+    }
+    .horizontal-header-containt> .button
+    {
+
+        height: 55px;
+        margin-top: 4%;
+        bottom: 0;
+        font-size: 1em;
+        text-align: center;
+        padding-left: 10%;
+        font-size: 0.96em;
+        width: 40px;
+
+    }   
+     .header-containt .horizontal-header-containt .button:hover, 
+    .header-containt .horizontal-header-containt .button:focus 
+    {
+        margin-top: 6%;
+        font-size: 0.8em;
+        text-align: center;
+        margin-left: 1rem;
+        padding-right: 62px;
+        border-radius: 15px 0 0 15px;
+        padding-left: 3px;
+
+    }
+}
+
+@media screen and (max-width: 580px)  {
+    
+    .vertical-header-containt .pp-img
+    {
+        height: 50px;
+        width: 50px;
+        margin-top: 1rem;
+    }
+    .text-details 
+    {
+        margin-left: 10px;
+        font-size: 0.5em;
+        top: 0;
+    }
+    .text-details h2
+    {
+        margin-top: 20px;
+    }
+    .horizontal-header-containt
+    {
+        padding-right: 10px;
+    }
+    .horizontal-header-containt> .button
+    {
+
+        height: 55px;
+        margin-top: 4%;
+        bottom: 0;
+        font-size: 1em;
+        text-align: center;
+        padding-left: 10%;
+        font-size: 0.6em;
+        width: 40px;
+
+    }
+    
+
+    .header-containt .horizontal-header-containt .button:hover, 
+    .header-containt .horizontal-header-containt .button:focus 
+    {
+        margin-top: 6%;
+        font-size: 0.5em;
+        text-align: center;
+        margin-left: 1rem;
+        padding-right: 62px;
+        border-radius: 15px 0 0 15px;
+        padding-left: 3px;
+
+    }
+    table
+    {
+        margin-left: 3rem;
+    }
+    .exit-button
+    {
+        position: absolute;
+        margin-bottom: 0px;
+        margin-right: -95px;
+        width: 300px;
+    }
+    .exit-button button
+    {
+        width: 31px;
+    }
+    .exit-button button img
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+
+/* popup*/
+
+
+  /* Positionnez la forme Popup */
+  .login-popup {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    
+  }
+  /* Masquez la forme Popup */
+  .form-popup {
+    display: none;
+    position: fixed;
+    left: 45%;
+    top: 5%;
+    transform: translate(-25%, 55%);
+    border: none;
+    z-index: 9999999;
+  }
+  /* Styles pour le conteneur de la forme */
+  .form-container {
+    max-width: 300px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.1);
+    backdrop-filter: blur(34px);
+    border-radius: 15px;
+  }
+  /* Largeur complète pour les champs de saisie */
+  .form-container input[type="text"],
+  .form-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #eee;
+    border-radius: 5px;
+    border-top: 2px solid #5f2c82;
+    border-left: 1px solid #5f2c82;
+    box-shadow: 1px 15px 22px 1px rgba(0,0,0,0.2),
+     1px -5px 14px -12px #5f2c82;
+  }
+  /* Quand les entrées sont concentrées, faites quelque chose */
+  .form-container input[type="text"]:focus,
+  .form-container input[type="number"]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  /* Stylez le bouton de connexion */
+  .form-container .btn {
+    background-color: #8ebf42;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+  /* Stylez le bouton pour annuler */
+  .form-container .cancel {
+    background-color: #cc0000;
+  }
+  /* Planez les effets pour les boutons */
+  .form-container .btn:hover,
+  .open-button:hover {
+    opacity: 1;
+  }

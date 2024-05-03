@@ -23,23 +23,23 @@ if(!$checkUser2){
   if ($checkUser->rowCount() > 0) {
     echo "Connexion reussie pour ";
     $redirect = $checkUser->fetch()['matricule_sur'];
-    //session_start();
+    session_start();
     //session_destroy();
     
     
-    //$_SESSION['matricule_sur']=$redirect;
+    $_SESSION['matricule_sur']=$redirect;
    
-    header("location:surveillant.html");
+    header("location:surveillant.php");
     exit;
 }
  elseif ($checkUser2->rowCount() > 0) {
         echo "Connexion reussie pour ";
         $redirect = $checkUser2->fetch()['matricule_ens'];
-        //session_start();
+        session_start();
         
-        //$_SESSION['matricule_ens']=$redirect;
+        $_SESSION['matricule_ens']=$redirect;
        
-        header("location:enseignant.html");
+        header("location:enseignant.php");
         exit;
     }
      else $erreur="Donnees incorrect";

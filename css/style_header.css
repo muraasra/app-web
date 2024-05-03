@@ -14,3 +14,146 @@
     height: 80px;
     box-shadow: -1px 2px 10px 3px #BC7FCD inset; 
 }
+
+
+
+
+
+<!-- <?php 
+require "database.php";
+$db = database::connect(); // reconnexion a la base
+session_start();
+$matricule_ens=$_SESSION["matricule_ens"];
+    $statement = $db->query('SELECT *  FROM etudiant ORDER BY nom_etd ASC'); 
+    $statement2 = $db->query("SELECT *  FROM enseignant WHERE matricule_ens='$matricule_ens'"); 
+    $item = $statement2->fetch();
+
+
+    
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Enseignant</title>
+</head>
+<body>
+    <section class="header-containt">
+        <div class="vertical-header-containt">
+            <div class="pp-img">
+                <img src="icon/user_456212.png" alt="">
+            </div>
+            <div class="text-details">
+                <h2><?php echo$item["nom_ens"]; ?> </h2>
+                <h2><?php echo$item["matricule_ens"]; ?></h2>
+                <h2> <?php echo$item["matiere"]; ?></h2>
+            </div>
+            <div class="exit-button">
+            <a href="deconnection.php">
+                <span>log out</span>
+                <button><img src="icon/logout_659988-removebg-preview.png" alt=""></button>
+            </a>
+            </div>
+        </div>
+        <div class="containt-body-navbar">
+        <div class="horizontal-header-containt">
+            <button id="btn-etat" class="button">Etudiant</button>
+
+    
+
+    <section class="tableau-containt" >
+        
+
+ 
+        <div class="containt-table" id="block1">
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+üßp rreeeeeeeeeeeeeeeeee rrrrrrrrrrrf 0oizujhhhhhh <br>
+
+        <table type="2" >
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Matricule</th>
+                    <th id="etat">Etat</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            <?php 
+            
+            while ($item = $statement->fetch()) {
+                $hour= date('y-m-d' );
+                $matricule_etd=$item['matricule_etd'];
+    $query = $db->query("SELECT * FROM fiche_rtd WHERE matricule_etd='$matricule_etd' AND date_arrivee = '$hour'  "); 
+    if(!$query){
+        die("ça n'a pas marché :(");
+      }; 
+    if($query->rowCount() < 1) {
+    echo '<tr>' ;
+    echo '<td>'.$item["nom_etd"].'</td>' ;
+    echo '<td>'.$item["matricule_etd"].'</td>' ;
+    echo '' ;
+    echo "<td class='check-containt'> <a class='btn btn-success' href='fait.php?matricule_etd=". $item['matricule_etd'] . "' ><span class='glyphicon glyphicon-ok'>A</span></a> </td>";
+                
+            
+    echo '</tr>' ;
+    }
+            }
+           
+            
+                //$hour= date('y-m-d' );
+                //$query=$db->query("INSERT INTO fiche_rtd (date_arrivee, maticule_etd) VALUES ('$hour','$matricule_etd' ") ;
+            
+        
+    ?>
+                <tr>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td class="check-containt">
+                        <input type="checkbox" value="absent" class="check" name="checked">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td class="check-containt">
+                        <input type="checkbox" value="absent" class="check" name="checked">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td class="check-containt">
+                        <input type="checkbox" value="absent" class="check" name="checked">
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div> 
+    </section>
+        </div>
+    </section>
+</body>
+
+</html> 
